@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../config/config.php';
+require '../config/common.php';
 
 if(empty($_SESSION['user_id']) && empty($_SESSION['logged_in'])){
   header("Location: login.php");
@@ -19,9 +20,7 @@ if(!empty($_POST['search'])){
 }
 ?>
 
-<?php 
-include 'header.php';
- ?>
+<?php include 'header.php';?>
  <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
@@ -140,6 +139,4 @@ include 'header.php';
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
-  <?php 
-  include 'footer.php';
-   ?>
+  <?php include 'footer.php';?>
